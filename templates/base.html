@@ -18,6 +18,8 @@
     {% endblock %}
 
     {% block corejs %}
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/1bc4201a3d.js" crossorigin="anonymous"></script>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <!-- Popper.js -->
@@ -83,10 +85,10 @@
 
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 my-auto py-1 py-lg-0 text-center">
-          <button class="tablink" onclick="openPage('overview', this, 'blue')">Club Overview</button>
-          <button class="tablink" onclick="openPage('timetable', this, 'blue')">Timetable</button>
-          <button class="tablink" onclick="openPage('facilities', this, 'blue')">Club Facilities</button>
-          <button class="tablink" onclick="openPage('contact', this, 'blue')">Contact</button>
+          <button class="tablink" onclick="openPage('overview', this, '')">Club Overview</button>
+          <button class="tablink" onclick="openPage('timetable', this, '')">Timetable</button>
+          <button class="tablink" onclick="openPage('facilities', this, '')">Club Facilities</button>
+          <button class="tablink" onclick="openPage('contact', this, '')">Contact</button>
 
           <div id="overview" class="tabcontent">
             <h3>Club Overview</h3>

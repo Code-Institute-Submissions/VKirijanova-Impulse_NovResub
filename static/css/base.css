@@ -4,77 +4,77 @@ html {
 }
 
 body {
-  background: url() no-repeat center center fixed;
+  background: url('') no-repeat center center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
   color: #555;
   font-family: 'Lato';
 }
 
-/* Full page tab */
+  /* from Bulma */
+  .icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .logo-font {
+    text-transform: uppercase;
+  }
+  
+  .main-logo-link {
+    width: fit-content;
+  }
+  
+  .shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+  }
+  
+  .btn-black {
+    background: black;
+    color: white;
+  }
+  
+  .shop-now-button:hover,
+  .shop-now-button:active,
+  .shop-now-button:focus,
+  .btn-black:hover,
+  .btn-black:active,
+  .btn-black:focus {
+    background: #222;
+    color: white;
+  }
+  
+  .text-black {
+    color: #000 !important;
+  }
+  
+  .border-black {
+    border: 1px solid black !important;
+  }
+
+/* --------------------------------------- Full page tab */
   
   /* Style tab links */
   .tablink {
-    background-color: #555;
-    color: white;
+    background-color: white;
+    color: black;
     float: center;
-    border: none;
+    border:rgb(160, 153, 153);
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 20%;
   }
   
   .tablink:hover {
-    background-color: #777;
+    background-color: rgb(160, 153, 153);
   }
-
-  /* from Bulma */
-.icon {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.logo-font {
-  text-transform: uppercase;
-}
-
-.main-logo-link {
-  width: fit-content;
-}
-
-.shop-now-button {
-  background: black;
-  color: white;
-  min-width: 260px;
-}
-
-.btn-black {
-  background: black;
-  color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-  background: #222;
-  color: white;
-}
-
-.text-black {
-  color: #000 !important;
-}
-
-.border-black {
-  border: 1px solid black !important;
-}
   
   /* Style the tab content (and add height:100% for full page content) */
   .tabcontent {
@@ -84,11 +84,13 @@ body {
     height: 100%;
   }
   
-  #overview {background-color: blue;}
-  #timetable {background-color: blue;}
-  #facilities {background-color: blue;}
-  #contact {background-color: blue;}
+  #overview {background-color: rgb(160, 153, 153);}
+  #timetable {background-color: rgb(160, 153, 153);}
+  #facilities {background-color: rgb(160, 153, 153);}
+  #contact {background-color: rgb(160, 153, 153);}
 
+
+  
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

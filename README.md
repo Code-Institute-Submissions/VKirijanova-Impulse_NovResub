@@ -1,3 +1,16 @@
+To do:
+    1 Choose font family and add <link> to base.html
+    2 Choose main background picture add it to css url and image in to media folder
+    3 Close tab and style tab
+
+
+What did I use:
+1. Full page tab: https://www.w3schools.com/howto/howto_js_full_page_tabs.asp
+2. Font awesome
+3. Bootstrap
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome VKirijanova,

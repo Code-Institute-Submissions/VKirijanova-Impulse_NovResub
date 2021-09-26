@@ -1,0 +1,119 @@
+[
+    {
+        "pk": 1,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip5760012001",
+            "name": "Yearly full access",
+            "description": "For full year you can unlimited use all gym facilities",
+            "price": 576,
+            "category": 1,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip5800012002",
+            "name": "Monthly full access",
+            "description": "For full month you can unlimited use all gym facilities",
+            "price": 58,
+            "category": 2,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip1200012003",
+            "name": "One day full gym access",
+            "description": "One day unlimited use of all gym facilities",
+            "price": 12,
+            "category": 3,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip4000012004",
+            "name": "Yearly access for classes",
+            "description": "For full year you can unlimited attend gym classes",
+            "price": 400,
+            "category": 1,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 5,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip3800012005",
+            "name": "Monthly access to classes",
+            "description": "For full month you can unlimited attend gym classes",
+            "price": 38,
+            "category": 2,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 6,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip8000012006",
+            "name": "One day access to gym classes",
+            "description": "One day unlimited access to gym classes",
+            "price": 8,
+            "category": 3,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 7,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip3500012007",
+            "name": "Yearly access to swimming pool only",
+            "description": "For full year you can unlimited use swimming pool",
+            "price": 350,
+            "category": 1,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 8,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip3300012008",
+            "name": "Monthly access to swimming pool only",
+            "description": "For full month you can unlimited use swimming pool",
+            "price": 33,
+            "category": 2,
+            "image_url":"",
+            "image":""
+        }
+    },
+    {
+        "pk": 9,
+        "model": "packages.package",
+        "fields": {
+            "sku": "ip7000012009",
+            "name": "One day access to swimming pool",
+            "description": "One day use of swimming pool",
+            "price": 7,
+            "category": 3,
+            "image_url":"",
+            "image":""
+        }
+    }
+]

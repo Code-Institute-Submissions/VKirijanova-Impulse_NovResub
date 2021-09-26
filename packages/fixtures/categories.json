@@ -1,0 +1,27 @@
+[
+    {
+        "pk": 1,
+        "model": "packages.category",
+        "fields": {
+            "name": "package_for_year",
+            "friendly_name": "Package for year"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "packages.category",
+        "fields": {
+            "name": "package_for_month",
+            "friendly_name": "Package for month"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "packages.category",
+        "fields": {
+            "name": "package_for_day",
+            "friendly_name": "Package for day"
+        }
+    }
+
+]

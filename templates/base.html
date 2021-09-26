@@ -40,7 +40,7 @@
           </a>
         </div>
         <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <ul class="list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item dropdown">
                   <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="text-center">
@@ -59,9 +59,9 @@
                           <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                       {% endif %}
                   </div>
-                </li>
+              </li>
               <li list-inline-item>
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Get Started</a>
+                  <a href="{% url 'account_signup' %}" class="dropdown-item display-inline">Get Started</a>
               </li>
               <li list-inline-item>
                 {% if request.user.is_authenticated %}
@@ -81,7 +81,6 @@
               </li>
           </ul>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
       </div>
       <div class="row bg-white">
         <nav class="navbar navbar-expand-lg navbar-light w-100">

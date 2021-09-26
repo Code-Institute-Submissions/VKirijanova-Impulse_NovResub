@@ -1,7 +1,8 @@
 To do:
     1 Choose font family and add <link> to base.html
     2 Choose main background picture add it to css url and image in to media folder
-    3 Close tab and style tab
+    3 Close tab and style tab, tab must stay all time
+
 
 
 What did I use:
@@ -9,6 +10,8 @@ What did I use:
 2. Font awesome
 3. Bootstrap
 
+
+Changed nav bar as find main-nav more usefull and more comfortable for users rather than full page tab
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)

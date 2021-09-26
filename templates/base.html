@@ -47,6 +47,7 @@
                           <div><i class="fas fa-user fa-lg"></i></div>
                           <p class="my-0">Members Login</p>
                       </div>
+                  </a>
                   <div class="dropdown-menu border-0" aria-labelledby="user-options">
                       {% if request.user.is_authenticated %}
                           {% if request.user.is_superuser %}
@@ -58,7 +59,6 @@
                           <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                       {% endif %}
                   </div>
-                  </a>
                 </li>
               <li list-inline-item>
                   <a href="{% url 'account_signup' %}" class="dropdown-item">Get Started</a>
@@ -80,38 +80,18 @@
                 {% endif %}
               </li>
           </ul>
-      </div>
-      </div>
-
-      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-        <div class="col-12 my-auto py-1 py-lg-0 text-center">
-          <button class="tablink" onclick="openPage('overview', this, '')">Club Overview</button>
-          <button class="tablink" onclick="openPage('timetable', this, '')">Timetable</button>
-          <button class="tablink" onclick="openPage('facilities', this, '')">Club Facilities</button>
-          <button class="tablink" onclick="openPage('contact', this, '')">Contact</button>
-
-          <div id="overview" class="tabcontent">
-            <h3>Club Overview</h3>
-            <p>Our club was open..</p>
-          </div>
-
-          <div id="timetable" class="tabcontent">
-            <h3>Timetable</h3>
-            <p>Timetable of group exsercises</p>
-          </div>
-
-          <div id="facilities" class="tabcontent">
-            <h3>Club Facilities</h3>
-            <p>We have gym and swimming pool</p>
-          </div>
-
-          <div id="contact" class="tabcontent">
-            <h3>Contact</h3>
-            <p>You can find us...</p>
-          </div>
         </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
       </div>
-
+      <div class="row bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% include 'includes/mobile-top-header.html' %}
+            {% include 'includes/main-nav.html' %}
+        </nav>
+    </div>
     </header>
 
     {% block page_header %}
@@ -121,31 +101,6 @@
     {% endblock %}
 
     {% block postloadjs %}
-      <script>
-        function openPage(pageName, elmnt, color) {
-          // Hide all elements with class="tabcontent" by default */
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-
-          // Remove the background color of all tablinks/buttons
-          tablinks = document.getElementsByClassName("tablink");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].style.backgroundColor = "";
-          }
-
-          // Show the specific tab content
-          document.getElementById(pageName).style.display = "block";
-
-          // Add the specific color to the button used to open the tab content
-          elmnt.style.backgroundColor = color;
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-      </script>
     {% endblock %}
 
   </body>

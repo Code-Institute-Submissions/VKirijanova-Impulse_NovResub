@@ -23,7 +23,7 @@
   </li>
   <li list-inline-item>
     {% if request.user.is_authenticated %}
-      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link text-black nav-link d-block d-lg-none" href="">
+      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link text-black nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
           <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">

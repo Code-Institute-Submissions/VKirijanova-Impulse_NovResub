@@ -1,7 +1,7 @@
 To do:
     1 Choose font family and add <link> to base.html
     2 Choose main background picture add it to css url and image in to media folder
-    3 Close tab and style tab, tab must stay all time
+
 
 
 

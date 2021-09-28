@@ -20,13 +20,13 @@ class Purchase(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
-    def generate_purchase_number(self):
+    def _generate_purchase_number(self):
         """ Generate unique number (using UUID) """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """ Update grand total each time a line item is added """
-        self.purchase_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.purchase_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         self.grand_total = self.purchase_total
         self.save()
@@ -42,7 +42,7 @@ class Purchase(models.Model):
 
 class PurchaseLineItem(models.Model):
     purchase = models.ForeignKey(Purchase, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Package, null=False, blank=False, on_delete=models.CASCADE)
+    package = models.ForeignKey(Package, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 

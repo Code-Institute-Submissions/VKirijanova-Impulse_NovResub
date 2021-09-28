@@ -1,0 +1,15 @@
+Dear {{ order.full_name }}.
+
+This is the confirmation email to confirm your purchase. Ypur purchase information is below:
+
+Purchase Number: {{ purchase.purchase_number }}
+Purchase Date: {{ purchase_date }}
+Grand Total: {{ purchase.grand_total }}
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+See you soon,
+
+Sincerely,
+
+Impulse team

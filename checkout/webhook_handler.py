@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 from .models import Purchase, PurchaseLineItem
 from packages.models import Package
@@ -13,6 +16,23 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
+
+    def _send_confirmation_email(self, purchase):
+        """Send users a confirmation letter"""
+        cust_email = purchase.email
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'purchase': purchase})
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'purchase': purchase, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+        
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )        
 
     def handle_event(self, event):
         """
@@ -77,6 +97,7 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if purchase_exists:
+            self._send_confirmation_email(purchase)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
@@ -112,6 +133,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
+        self._send_confirmation_email(purchase)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)

@@ -19,7 +19,12 @@
     </div>
     </li>
   <li class="list-inline-item">
-    <a class="text-black nav-link d-block d-lg-none" href="{% url 'account_signup' %}" class="dropdown-item">Get Started</a>
+    <a class="text-black nav-link d-block d-lg-none" href="{% url 'account_signup' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="text-center">
+        <div><i class="fas fa-dumbbell fa-lg"></i></div>
+        <p class="my-0">Started</p>
+      </div>
+    </a>
   </li>
   <li class="list-inline-item">
     {% if request.user.is_authenticated %}

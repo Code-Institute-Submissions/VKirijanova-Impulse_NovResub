@@ -6,6 +6,8 @@ from django.conf import settings
 from .forms import PurchaseForm
 from .models import Purchase, PurchaseLineItem
 from packages.models import Package
+from accounts.forms import UserAccountForm
+from accounts.models import UserAccount
 from bag.contexts import bag_contents
 
 import stripe
@@ -90,7 +92,24 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        purchase_form = PurchaseForm()
+        if request.user.is_authenticated:
+            try:
+                account = UserAccount.objects.get(user=request.user)
+                purchase_form = PurchaseForm(initial={
+                    'full_name': account.user.get_full_name(),
+                    'email': account.user.email,
+                    'phone_number': account.default_phone_number,
+                    'country': account.default_country,
+                    'postcode': account.default_postcode,
+                    'town_or_city': account.default_town_or_city,
+                    'street_address1': account.default_street_address1,
+                    'street_address2': account.default_street_address2,
+                    'county': account.default_county,
+                })
+            except UserAccount.DoesNotExist:
+                purchase_form = PurchaseForm()
+        else:
+            purchase_form = PurchaseForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing!')
@@ -106,8 +125,29 @@ def checkout(request):
 
 
 def checkout_success(request, purchase_number):
+
     save_info = request.session.get('save_info')
     purchase = get_object_or_404(Purchase, purchase_number=purchase_number)
+    
+    if request.user.is_authenticated:
+        account = UserAccount.objects.get(user=request.user)
+        purchase.user_account = account
+        purchase.save()
+
+        if save_info:
+            account_data = {
+                'default_phone_number': purchase.phone_number,
+                'default_country': purchase.country,
+                'default_postcode': purchase.postcode,
+                'default_town_or_city': purchase.town_or_city,
+                'default_street_address1': purchase.street_address1,
+                'default_street_address2': purchase.street_address2,
+                'default_county': purchase.county,
+            }
+            user_account_form = UserAccountForm(account_data, instance=account)
+            if user_account_form.is_valid():
+                user_account_form.save()
+    
     messages.success(request, f'Order successfully processed! \
         Your order number is {purchase_number}. A confirmation \
         email will be sent to {purchase.email} with all necessary information.')

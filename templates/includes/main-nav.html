@@ -1,38 +1,33 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Club Overview
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#">
-                Timetable1
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
-            <button type="button" class="collapsible">Open Collapsible</button>
+            <button type="button" class="collapsible logo-font font-weight-bold mr-5">Club Overview</button>
             <div class="content">
                 <p>Lorem ipsum...</p>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Club Facilities
-            </a>
+            <button type="button" class="collapsible logo-font font-weight-bold mr-5">Timetable</button>
+            <div class="content">
+                <p>Lorem ipsum...</p>
+            </div>
         </li>
 
-        <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'packages' %}" aria-haspopup="true" aria-expanded="false">
-                Packages
-            </a>
+        <li class="nav-item dropdown">
+            <button type="button" class="collapsible logo-font font-weight-bold mr-5">Club Facilities</button>
+            <div class="content">
+                <p>Lorem ipsum...</p>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+                <a class="collapsible logo-font font-weight-bold mr-5 nav-link" href="{% url 'packages' %}" aria-haspopup="true" aria-expanded="false">
+                    Packages
+                </a>
         </li>
     </ul>
 </div>
-
 {% block postloadjs %}
 <script>
     var coll = document.getElementsByClassName("collapsible");

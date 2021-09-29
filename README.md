@@ -1,124 +1,132 @@
-To do:
-    1 Choose font family and add <link> to base.html
-    2 Choose main background picture add it to css url and image in to media folder
-    3 webhandler showing error 401
+# Impulse #
+
+Story about why this website
+
+# UX #
+
+## Strategy plane ##
+The aim of the project is to create an interactive book's library that would be fully responsive on all devices and screens. The 
+target will be all aged love readers, so website should be simple to understand and easy to navigate.
+
+## Scope plane ##
+The library will be styled in a minimalistic design. It will allow users to log in and log out of app, add books which they already read with full description of the book. Also they can browse through other customers books and find new books. 
+
+## Structure plane ##
+The main page will have list of books on the website, entered by all users. User will be able to log in, by pressing login button and view his profile. He will be able to add new books manually with Name of the book, Author, pages, year of publicity and small book description. 
+
+## Skeleton plane ##
+All website will be created in same design. The header will be fixed on the top with all required buttons. Extra information about books will be hiden in colapsable card.
+
+The wireframe for mobile phone and desktop will look the same, however mobile version will have hamburger button to hide buttons.
+[![mockup.png](https://i.postimg.cc/KvZN5Rb1/mockup.png)](https://postimg.cc/7bW0HPf4)
+
+## Surfuce plane ##
+Website designed in yellow colors, to match the theme of the app Books. Background picture is not that bright, however gives the feeling of real live library.
+
+# User Stories: #
+1. 
+
+Mockup
+[![responsiveness.png](https://i.postimg.cc/MpqYdX8c/responsiveness.png)](https://postimg.cc/PPVZqXJh)
+
+The live version of project you can see [here.](https://virtual-books-library.herokuapp.com/)
+
+# Features #
+
+### Existing features ###
+Website has a collapsible books list with extra information about them inside. Have buttons which can Log users in, log them out, add new books, edit books and delete them. New users can register to app and enjoy full library.
 
 
+### Future features ###
+- Users will be able to create their wish list, which will be visible only for them. This way they can safe all book they intereted for future and not loose them in long books list.
+- All books will have purchase links, for users to easy find their favorite books online.
+- Admin will be only user who will be able to delete books from app, however other users will be able to add books to their profile or wish list.
+- As some of input fields have min and max characters, users will see how many charactares must be entered.
 
-What did I use:
-1. Full page tab: https://www.w3schools.com/howto/howto_js_full_page_tabs.asp
-2. Font awesome
-3. Bootstrap
+# Technology used #
+- HTML 
+- CSS (the language to style HTML and make bootstrap more individual)
+- JavaScript
+- jQuery
+
+- Gitpod
+- GitHub
+- Heroku
+- Werkzeug??
+- Materialize
+
+- Chrome DevTools
+- Jshint
+- W3C school
+- W3C mark up validation service (to test HTML and CSS)
+
+# Testing #
+- HTML tested with W3C mark up validation service. I had some syntax issue only due to jinja template been used to build all pages.
+- CSS have been tested with W3C mark up validation service, error been showed:[![Error.png](https://i.postimg.cc/W1nXCm90/Error.png)](https://postimg.cc/Mnn7jBJG). 
+
+After removing shadow from element, no errors was found.
+
+- Javascript code passed in Jshint with no major issues, one undefined variable found - $.
+- Project's responsiveness checked on iPhone, Google Chrome, Microsoft Edge and worked perfectly.
+
+# Manual Testing #
+Home page have a list of books, already added by users. By clicking on the book name, container collapse down and show extra information about the book. On right side you have Home, Log In and Register button, on mobile version buttons hiding in hamburger button.
+Press Log In button it will redirect you to log in page with form which require Username and Password. Both input areas are mandatory and will turn red if left empty. If user will log in wrong username or password, flash message will pop in with message "Incorrect Uername and/or Password". Username and Password have minimum of 5 caracters, which indicates with message "Match the requested format" if you type less than 5. After entering right username and password, press Log In button, it is redirecting user to their profile page.
+Press Register button it will redirect to register page with form. Username and Password have minimum of 5 caracters, which indicates with message "Match the requested format" if you type less than 5. After choosing new username and pasword and press Sign Up botton it showed error, studying code in app.py find mistake (right parenthesis was in the wrong place). After fixing mistake and pressing Sign Up button again app was redirected to created user's profile page with flash message "Welcome to our library!". 
+When user is logged in their profile following new buttons shows on right side of screen: My Page, Add New Book, Wish List and Log Out. My Page and Wish List is empty page with only Name on it.
+Press Add New Book button and it will redirect to form. Form consist of text fields to fill up Book Name, Author, Book Description, Pages, Year of Publishing and Purchase Link, as well as style of books section, where you can choose style of the book. By fill up all field and choosing one book style, press add book. App redirect to Home Page and pop up flsh message on the top "Book Successfully Added to Library.
+On home page there is list of all books been added previously. Each book have two buttons "Delete" and "Edit". Press button Delete and it deleting selected book with flash message "Book Succesfully Deleted". Press Edit button and it will redirect you to form with full description of book to edit. Update required field and press button "Edit Book", changes been saved and flash message appearing on the top "Book Successfully Updated".
+On right side press button Log Out. It will log user out, redirect to Log In page with flash message "You have been logged out". Buttons "My Page", "Add New Book", "Wish List" and "Log Out" dissapeared, as well "Edit" and "Delete" buttons next to books on Home Screen.
+
+## Testing user stories ##
+1. 
+
+### Issues ###
 
 
-Changed nav bar as find main-nav more usefull and more comfortable for users rather than full page tab
+# Deployment #
+
+### Managing Git ###
+1. I then added to my local repo using `git add -A`;
+2. And then commit them to my local repo using `git commit -m "message"`;
+3. Once that was done I push my local repo to the remote (Github) using `git push`.
+
+### Cloning a repositary ###
+If you would like to clone a repositary follow theese steps:
+1. Log in on GitHub;
+2. Navigate to needed repositary;
+3. Above the list of the files, click green button Code;
+4. On the dropdown selection, you will find a link to clone the code with HHTPS;
+5. Open Git Bash;
+6. Open new location where you want to clone repositary;
+7. Type git clone, and then paste the URL you copied earlier.
+8. Press Enter.
+
+### Heroku deployment ###
+1. Setup files which Heroku needs in your terminal:
+    - requirements.txt: tells Heroku which applications and dependencies are required to run our app.
+    - Procfile: what Heroku looks for to know which file runs the app (use capital P for Procfile, and delete blank line at bottom of Procfile as may cause problems when running on Heroku).
+2. Go to [Heroku](https://www.heroku.com/), once logged into your dashboard, click ‘Create new app’.
+3. Create app name (must be unique, and generally use a 'dash' or 'minus' instead of spaces, and all lowercase letters).
+4. Choose region closest to you.
+5. Then click ‘Create app’.
+6. Setup automatic deployment from your GitHub repository.
+7. Double check if your GitHub profile is displayed.
+8. Add your repository name and click 'Search'.
+9. Once it finds your repo, click 'Connect' to connect to this app.
+10. Click on ‘Settings’.
+11. Then click ‘Reveal Config Vars’.
+12. Then enter the variables (from the env.py) file to securely tell Heroku which variables are required: IP, PORT, MONGO_DBNAME, MONGO_URI, SECRET_KEY.
+13. Push requirements.txt and Profile to repository, in terminal, add/commit/push.
+14. In [Heroku](https://www.heroku.com/), press ‘Enable Automatic Deployment’ and ‘Deploy Branch’.
+15. Once it's done, you'll see ‘Your app was successfully deployed.’ Click ‘View’ to launch your new app.
 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+### Credits ###
 
-Welcome VKirijanova,
+### Content ###
+1. Background picture been taken from [Unsplash website](https://unsplash.com/)
+2. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Acknowledgements ###
+My mentor Spencer Barriball for his support.

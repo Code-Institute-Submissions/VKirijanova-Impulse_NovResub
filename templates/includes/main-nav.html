@@ -7,9 +7,16 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Timetable
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#">
+                Timetable1
             </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <button type="button" class="collapsible">Open Collapsible</button>
+            <div class="content">
+                <p>Lorem ipsum...</p>
+            </div>
         </li>
 
         <li class="nav-item dropdown">
@@ -25,3 +32,22 @@
         </li>
     </ul>
 </div>
+
+{% block postloadjs %}
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+{% endblock %}

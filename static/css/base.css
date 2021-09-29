@@ -16,7 +16,7 @@ body {
   color: #022B3A;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width:100%;
   border: none;
   text-align: left;
   outline: none;
@@ -32,8 +32,59 @@ body {
 .content {
   padding: 0 18px;
   display: none;
-  overflow: hidden;
+  overflow: auto;
   background-color: #BFDBF7;
+  height: fit-content;
+  width: fit-content;
+}
+
+/* Classes timetable */
+h2 { 
+  color: #222528; 
+  margin: 0px 0px 5px 0px; 
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 300; 
+  line-height: 1; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  font-size: 20px; 
+  line-height: 38px; 
+}
+
+p { 
+  margin: 0 0 10px; 
+  line-height: 1.7; 
+}
+
+p:last-child { 
+  margin: 0px; 
+}
+
+.timetable-workout { 
+  font-size: 12px; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  background-color: #1F7A8C; 
+  font-weight: 100; 
+  font-family: 'Oswald', sans-serif; 
+}
+
+.timetable-workout,
+.timetable.table>tbody>tr>td { 
+  color: #fff; 
+}
+
+.timetable,
+.table>thead>tr>th { 
+  font-size: 14px; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  font-weight: 100; 
+  font-family: 'Oswald', sans-serif; 
+}
+
+.table-striped tbody tr:nth-of-type(odd) { 
+  background-color: hsl(224, 100%, 99%); 
 }
 
 
@@ -125,15 +176,6 @@ a.category-badge > span.badge:hover {
   cursor: pointer;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -187,6 +229,16 @@ color: #fff;
 .allauth-form-inner-content a {
 color: #17a2b8; /* text-info */
 }
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

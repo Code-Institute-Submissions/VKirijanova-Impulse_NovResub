@@ -1,35 +1,43 @@
 # Impulse #
-
-
+Impulse website been created for people who would like to continue or start the active lifestyle in the new gym. Website have all necessary information
+about new gym and everything it can offer to new members. 
 
 # UX #
 
 ## Strategy plane ##
-The aim of the project is to create an interactive book's library that would be fully responsive on all devices and screens. The 
-target will be all aged love readers, so website should be simple to understand and easy to navigate.
+Website should attract new customers who are 18 years old above. As gym is new all information customer will be getting from this webtsite. Design must be intuitive, which will allow users to navigate and engage with the website without any prior experience .It should be easy in use, especially find necessary information. Pictures should be attractive and clear.  
 
 ## Scope plane ##
-The library will be styled in a minimalistic design. It will allow users to log in and log out of app, add books which they already read with full description of the book. Also they can browse through other customers books and find new books. 
+Website will have navbar which will be devided in two rows, one will have Name of Gym, Member Login Button and Shopping bag. Second row will have collapsible cards: Club overview, Timetable, Club Facilities and Packages. Main page will contain welcome message and Join Us Button.
 
 ## Structure plane ##
-The main page will have list of books on the website, entered by all users. User will be able to log in, by pressing login button and view his profile. He will be able to add new books manually with Name of the book, Author, pages, year of publicity and small book description. 
+Users will be able to purchase packages and sign up. Login to their profile and see purchase history. 
+There will be 12 packages available to purchase 1 year (full gym, swimming pool only or classes only), 1 month (full gym, swimming pool only or classes only) or 1 day(full gym, swimming pool only or classes only).
 
 ## Skeleton plane ##
-All website will be created in same design. The header will be fixed on the top with all required buttons. Extra information about books will be hiden in colapsable card.
+All website will be created in same design. The header will be fixed on the top with all required buttons. 
 
-The wireframe for mobile phone and desktop will look the same, however mobile version will have hamburger button to hide buttons.
-[![mockup.png](https://i.postimg.cc/KvZN5Rb1/mockup.png)](https://postimg.cc/7bW0HPf4)
+The wireframe for mobile phone and desktop will look the same, however mobile version will hide in collapsable button second row of nav bar.
+[![mockup.png](https://i.postimg.cc/KvZN5Rb1/mockup.png)](https://postimg.cc/tss6mJWR)
 
 ## Surfuce plane ##
-Website designed in yellow colors, to match the theme of the app Books. Background picture is not that bright, however gives the feeling of real live library.
+Website designed in light colors with slightly blue shadow to match main picture. 
 
 # User Stories: #
-1. 
+1. As a user I would like to register to my peronal account.
+2. As a user I would like to login and logout.
+3. As a user I would like to receive confirmation email after creating account.
+4. As a user I would like to see my previous packages.
+5. As a user I would like to see all packages available.
+6. As a user I would like to see details of packages (like price, what included)
+6. As a user I would like to see classes and what time they are available.
+7. As a user I would like to view the total packages.
+
 
 Mockup
-[![responsiveness.png](https://i.postimg.cc/MpqYdX8c/responsiveness.png)](https://postimg.cc/PPVZqXJh)
+[![responsiveness.png]()]()
 
-The live version of project you can see [here.](https://virtual-books-library.herokuapp.com/)
+The live version of project you can see [here.]()
 
 # Features #
 
@@ -38,10 +46,8 @@ Website has a collapsible books list with extra information about them inside. H
 
 
 ### Future features ###
-- Users will be able to create their wish list, which will be visible only for them. This way they can safe all book they intereted for future and not loose them in long books list.
-- All books will have purchase links, for users to easy find their favorite books online.
-- Admin will be only user who will be able to delete books from app, however other users will be able to add books to their profile or wish list.
-- As some of input fields have min and max characters, users will see how many charactares must be entered.
+- There will be certain amount of spaces to classes, so users will be able to save space through their profile.
+- Team introduction (coaches)
 
 # Technology used #
 - HTML 
@@ -52,7 +58,6 @@ Website has a collapsible books list with extra information about them inside. H
 - Gitpod
 - GitHub
 - Heroku
-- Werkzeug??
 - Materialize
 
 - Chrome DevTools
@@ -62,27 +67,51 @@ Website has a collapsible books list with extra information about them inside. H
 
 # Testing #
 - HTML tested with W3C mark up validation service. I had some syntax issue only due to jinja template been used to build all pages.
-- CSS have been tested with W3C mark up validation service, error been showed:[![Error.png](https://i.postimg.cc/W1nXCm90/Error.png)](https://postimg.cc/Mnn7jBJG). 
-
-After removing shadow from element, no errors was found.
-
+- CSS have been tested with W3C mark up validation service 
 - Javascript code passed in Jshint with no major issues, one undefined variable found - $.
 - Project's responsiveness checked on iPhone, Google Chrome, Microsoft Edge and worked perfectly.
 
 # Manual Testing #
-Home page have a list of books, already added by users. By clicking on the book name, container collapse down and show extra information about the book. On right side you have Home, Log In and Register button, on mobile version buttons hiding in hamburger button.
-Press Log In button it will redirect you to log in page with form which require Username and Password. Both input areas are mandatory and will turn red if left empty. If user will log in wrong username or password, flash message will pop in with message "Incorrect Uername and/or Password". Username and Password have minimum of 5 caracters, which indicates with message "Match the requested format" if you type less than 5. After entering right username and password, press Log In button, it is redirecting user to their profile page.
-Press Register button it will redirect to register page with form. Username and Password have minimum of 5 caracters, which indicates with message "Match the requested format" if you type less than 5. After choosing new username and pasword and press Sign Up botton it showed error, studying code in app.py find mistake (right parenthesis was in the wrong place). After fixing mistake and pressing Sign Up button again app was redirected to created user's profile page with flash message "Welcome to our library!". 
-When user is logged in their profile following new buttons shows on right side of screen: My Page, Add New Book, Wish List and Log Out. My Page and Wish List is empty page with only Name on it.
-Press Add New Book button and it will redirect to form. Form consist of text fields to fill up Book Name, Author, Book Description, Pages, Year of Publishing and Purchase Link, as well as style of books section, where you can choose style of the book. By fill up all field and choosing one book style, press add book. App redirect to Home Page and pop up flsh message on the top "Book Successfully Added to Library.
-On home page there is list of all books been added previously. Each book have two buttons "Delete" and "Edit". Press button Delete and it deleting selected book with flash message "Book Succesfully Deleted". Press Edit button and it will redirect you to form with full description of book to edit. Update required field and press button "Edit Book", changes been saved and flash message appearing on the top "Book Successfully Updated".
-On right side press button Log Out. It will log user out, redirect to Log In page with flash message "You have been logged out". Buttons "My Page", "Add New Book", "Wish List" and "Log Out" dissapeared, as well "Edit" and "Delete" buttons next to books on Home Screen.
+1. Annautorised User: Home page contains of nav bar and main page. In main age under welcoming note there is button 'Join Us', after clicking on it, website will open  all packages offered. By clicking button 'Impulse' we are returning to the main page.
+Nav bar has main name of page 'Impulse' which redirect you to main page as soon as I press the button. On the right side there are 3 buttons: member login, get stated and shopping bag (set to zero). By pressing 'Member Login' show dropdown button 'Login'. This button redirect us to page where you can enter your user name and password and it log you in. 
+
+2. Register: by pressing 'Member Login' show dropdown button 'Login'. This button redirect us to page where there is button Sign Up. It show you form with email address, new user name and password. By filling all necessary field, I received varification email. After confirming email I was successfully signed up and redirect to main page.
+
+3. Registerd User: Nav bar has main name of page 'Impulse' which redirect you to main page as soon as I press the button. On the right side there are 3 buttons: member login, get stated and shopping bag. By pressing 'Member Login' show dropdown two buttons: My account and Logout. Press button 'My account' it redirect to user's account where he can find his personal details and purchase history. Press button 'Member Login' and choose 'Logout' from dropdown option. Website checking if we want log out, press sign out and website redirecting to main page.
+
+4. Button of nav bar has 4 collapsable card. Pressed Club Overview and it showed short club overview. Pressed again and it closed. Pressed Timetable and Timetable showed with classes name and time in particular week day. Pressed again and timetable dissapear. Pressed Club Facilieties showed three cards with pictures of faccilieties (main gym, swimming pool and studio). Presser last button Packages opened new page with all packages we have. 
+
+5. Choosed one of the packages, it opened new page with package picture, name, description and price. +/- button updated number of packages without leaving page. Pressed button add to bag, in bag appeared chosen item an total price been updated. Pressed shopping bag icon on the top right corner. Shopping bag have information about package and total price. Pressed button Secure checkout, redirect to checkout form. Filled out all necessary fields, entered fake card details as per stripe documentation. Pressed complete order. Email been send to terminal and on website showed purchase order.
+  
 
 ## Testing user stories ##
-1. 
+1. As a user I would like to register to my peronal account.
+    User can sign up straight after he will choose his first package in the new gym, by pressing 'Join us today' or 'Packaages' buttons.
+
+2. As a user I would like to login and logout.
+    User can see Member Login straight after entering website. After pressing button login user will have to enter his user name and password to enter login.
+
+3. As a user I would like to receive confirmation email after creating account.
+    With the help of Strige, user will receive confirmation straight after purchasing package.
+
+4. As a user I would like to see my previous packages.
+    User can see his order history in his personal account.
+
+5. As a user I would like to see all packages available.
+    By presing packages on nav bar user will see all packages available with all relavant information
+
+6. As a user I would like to see details of packages (like price, what included)
+    As soon a user will click on package, they will have page opened with all details including price, name and description.
+
+6. As a user I would like to see classes and what time they are available.
+    User can press button Timetable in nav bar where they will see all available classes, their time and week of the day.
+
+7. As a user I would like to view the total packages which he chose.
+    By pressing shopping bag user can see all order, review number and securely purchase package and join gym.
 
 ### Issues ###
-
+1. On last day of project 'get started' button stopped working, when I pressed button, nothing happened.
+2. Keep getting error on webhook in stripe. Asked couple of people on slack to have a look, however no one find problem.
 
 # Deployment #
 
@@ -123,12 +152,13 @@ If you would like to clone a repositary follow theese steps:
 
 
 ### Credits ###
+Main idea and help been taken from Boutique Ado project created by Code Institute
 
 ### Content ###
-1. Background picture been taken from [Unsplash website](https://unsplash.com/)
-2. Used to create collapsible nav: https://www.w3schools.com/howto/howto_js_collapsible.asp
-3. Classes timetable https://bootsnipp.com/snippets/mME3y
-4. cards https://www.w3schools.com/bootstrap4/bootstrap_cards.asp
+1. Main background picture and package's pictures been taken from [Unsplash website](https://unsplash.com/)
+2. To create collapsible nav, I used help from [w3school](https://www.w3schools.com/howto/howto_js_collapsible.asp)
+3. To create clases table I used inspiration from [Bootsnipp]{https://bootsnipp.com/snippets/mME3y)
+4. To create cards for nav bar I used [w3school]{https://www.w3schools.com/bootstrap4/bootstrap_cards.asp)
 
 
 ### Acknowledgements ###

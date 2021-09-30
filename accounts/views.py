@@ -29,6 +29,7 @@ def account(request):
 
     return render(request, template, context)
 
+
 def purchase_history(request, purchase_number):
     purchase = get_object_or_404(Purchase, purchase_number=purchase_number)
 

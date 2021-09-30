@@ -108,6 +108,7 @@ Nav bar has main name of page 'Impulse' which redirect you to main page as soon 
 
 ### Issues ###
 1. On last day of project 'get started' button stopped working, when I pressed button, nothing happened.
+2. Issue with wevhook handler, especially handle_payment_intent_succeeded. Couldn't solve issue
 2. After deploying in AWS, some pictures is not showing
 
 # Deployment #

@@ -1,6 +1,6 @@
 # Impulse #
 
-Story about why this website
+
 
 # UX #
 
@@ -128,6 +128,7 @@ If you would like to clone a repositary follow theese steps:
 1. Background picture been taken from [Unsplash website](https://unsplash.com/)
 2. Used to create collapsible nav: https://www.w3schools.com/howto/howto_js_collapsible.asp
 3. Classes timetable https://bootsnipp.com/snippets/mME3y
+4. cards https://www.w3schools.com/bootstrap4/bootstrap_cards.asp
 
 
 ### Acknowledgements ###

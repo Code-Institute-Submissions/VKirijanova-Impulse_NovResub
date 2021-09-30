@@ -34,10 +34,7 @@ Website designed in light colors with slightly blue shadow to match main picture
 7. As a user I would like to view the total packages.
 
 
-Mockup
-[![responsiveness.png]()]()
-
-The live version of project you can see [here.]()
+The live version of project you can see [here.](https://vkirijanova-impulse.herokuapp.com/)
 
 # Features #
 
@@ -111,7 +108,7 @@ Nav bar has main name of page 'Impulse' which redirect you to main page as soon 
 
 ### Issues ###
 1. On last day of project 'get started' button stopped working, when I pressed button, nothing happened.
-2. Keep getting error on webhook in stripe. Asked couple of people on slack to have a look, however no one find problem.
+2. After deploying in AWS, some pictures is not showing
 
 # Deployment #
 

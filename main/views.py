@@ -14,3 +14,7 @@ def cluboverview(request):
 
 def timetable(request):
     return render(request, 'main/timetable.html')
+
+
+def facilities(request):
+    return render(request, 'main/facilities.html')

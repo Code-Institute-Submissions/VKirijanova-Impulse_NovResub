@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content%}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Club Facilities</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="package-container col-10 offset-1">
+                <div class="card-deck" >
+                    <div class="card" style="width:300px">
+                        <img class="card-img-top" src="/media/allgym1.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Main Gym Floor</h4>
+                            <p class="card-text">
+                                Our main gym floor is equiped with the latest gym equipment. Following is just small example: <strong>skillmill</strong> (which is self-powered, 
+                                that let you train body and is fully controled by you ), <strong>kettlebells</strong> (allowing you to develop almost every 
+                                aspect of your fitness, from endurance and strength to agility and balance).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width:300px">
+                        <img class="card-img-top" src="/media/swimmingpool1.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Swimming Pool</h4>
+                            <p class="card-text">
+                                Our swimming pool is 16 meters long with 3 lines. It has integrated UV cleaning system.
+                                It is perfect place to fine-tune your bilateral breathing or learn how to swim with instructor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width:300px">
+                        <img class="card-img-top" src="/media/groupsession2.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Studio for classes</h4>
+                            <p class="card-text">
+                                With mood lighting and calming music, our studios will restore your inner zen. We offer a range 
+                                of classes including pilates and yoga. When studio is not occupied with lessons you can freely 
+                                use it for individual exercise or calming stretching.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

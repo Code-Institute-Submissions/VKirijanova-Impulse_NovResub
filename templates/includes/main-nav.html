@@ -10,51 +10,15 @@
                 <u>Timetable</u>
             </a>
         </li>
-
         <li class="nav-item dropdown">
-        <button type="button" class="collapsible logo-font font-weight-bold mr-5">Club Facilities</button>
-        <div class="content">
-            <div class="card-deck" >
-                <div class="card" style="width:400px">
-                    <img class="card-img-top" src="/media/allgym1.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">Main Gym Floor</h4>
-                        <p class="card-text">
-                            Our main gym floor is equiped with the latest gym equipment. Following is just small example: <strong>skillmill</strong> (which is self-powered, 
-                            that let you train body and is fully controled by you ), <strong>kettlebells</strong> (allowing you to develop almost every 
-                            aspect of your fitness, from endurance and strength to agility and balance).
-                        </p>
-                    </div>
-                </div>
-                <div class="card" style="width:400px">
-                    <img class="card-img-top" src="/media/swimmingpool1.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">Swimming Pool</h4>
-                        <p class="card-text">
-                            Our swimming pool is 16 meters long with 3 lines. It has integrated UV cleaning system.
-                            It is perfect place to fine-tune your bilateral breathing or learn how to swim with instructor.
-                        </p>
-                    </div>
-                </div>
-                <div class="card" style="width:400px">
-                    <img class="card-img-top" src="/media/groupsession2.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">Studio for classes</h4>
-                        <p class="card-text">
-                            With mood lighting and calming music, our studios will restore your inner zen. We offer a range 
-                            of classes including pilates and yoga. When studio is not occupied with lessons you can freely 
-                            use it for individual exercise or calming stretching.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <a class="collapsible logo-font font-weight-bold mr-5 nav-link text-black" href="{% url 'facilities' %}" aria-haspopup="true" aria-expanded="false">
+                <u>Club Facilities</u>
+            </a>
         </li>
-
         <li class="nav-item dropdown">
-        <a class="collapsible logo-font font-weight-bold mr-5 nav-link text-black" href="{% url 'packages' %}" aria-haspopup="true" aria-expanded="false">
-            <u>Packages !</u>
-        </a>
+            <a class="collapsible logo-font font-weight-bold mr-5 nav-link text-black" href="{% url 'packages' %}" aria-haspopup="true" aria-expanded="false">
+                <u>Packages !</u>
+            </a>
         </li>
     </ul>
 </div>

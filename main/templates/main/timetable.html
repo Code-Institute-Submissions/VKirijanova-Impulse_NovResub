@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content%}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Timetable</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="content">
+                <div class="container" id="timetable">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center mb30">
+                            <h2>CLASSES TIMETABLE</h2>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="timetable table table-striped ">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th scope="col"></th>
+                                        <th scope="col">Monday</th>
+                                        <th scope="col">Tuesday</th>
+                                        <th scope="col">Wednesday</th>
+                                        <th scope="col">Thursday</th>
+                                        <th scope="col">Friday</th>
+                                        <th scope="col">Saturday</th>
+                                        <th scope="col">Sunday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">08:00 Am - 09:00 Am</th>
+                                        <td class="timetable-workout">Pilates
+                                            <br> 08:15 AM - 09:00 AM
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="timetable-workout">Yoga
+                                            <br> 08:05 AM - 08:40 AM
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10:00 Am - 11:00 Am</th>
+                                        <td></td>
+                                        <td class="timetable-workout">Step
+                                            <br> 10:00 AM - 10:30 AM
+                                        </td>
+                                        <td></td>
+                                        <td class="timetable-workout">Yoga
+                                            <br> 10:15 AM - 11:00 AM
+                                        </td>
+                                        <td></td>
+                                        <td class="timetable-workout">HIIT
+                                            <br> 10:05 AM - 10:35 AM
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">04:00 PM - 05:00 PM</th>
+                                        <td class="timetable-workout">HIIT
+                                            <br> 04:00 PM - 04:45 PM
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="timetable-workout">Pilates
+                                            <br> 04:30 PM - 05:00 PM
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">06:00 PM - 07:00 PM</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="timetable-workout">Yoga
+                                            <br> 06:15 PM - 07:00 PM
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

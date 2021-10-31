@@ -10,3 +10,7 @@ def index(request):
 
 def cluboverview(request):
     return render(request, 'main/cluboverview.html')
+
+
+def timetable(request):
+    return render(request, 'main/timetable.html')

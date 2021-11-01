@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Package
 
+from .forms import PackageForm
+
 # Create your views here.
 
 def all_packages(request):
@@ -25,3 +27,15 @@ def package_detail(request, package_id):
     }
 
     return render(request, 'packages/package_detail.html', context)
+
+
+def add_package(request):
+    form = PackageForm()
+    template = 'packages/add_package.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+

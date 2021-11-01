@@ -25,9 +25,15 @@
                     {% for package in packages %}
                         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                             <div class="card h-100 border-0">
+                                {% if package.image %}
                                 <a href="{% url 'package_detail' package.id %}">
                                     <img class="card-img-top img-fluid" src="{{ package.image.url }}" alt="{{ package.name }}">
                                 </a>
+                                {% else %}
+                                <a href="{% url 'package_detail' package.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ package.name }}">
+                                </a>
+                                {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ package.name }}</p>
                                 </div>

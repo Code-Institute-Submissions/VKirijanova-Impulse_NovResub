@@ -50,3 +50,23 @@ def add_package(request):
     return render(request, template, context)
 
 
+def edit_package(request, package_id):
+    package = get_object_or_404(Package, pk=package_id)
+    if request.method == 'POST':
+        form = PackageForm(request.POST, request.FILES, instance=package)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated package')
+            return redirect(reverse('package_detail', args=[package.id]))
+        else:
+            messages.error(request, 'Failed to update package')
+    else:
+        form = PackageForm(instance=package)
+
+    template = 'packages/edit_package.html'
+    context = {
+        'form': form,
+        'package': package,
+    }
+
+    return render(request, template, context)

@@ -9,7 +9,7 @@
             "price": 576,
             "category": 1,
             "image_url":"https://images.unsplash.com/photo-1542766788-a2f588f447ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3876&q=80",
-            "image":"allgym1_Y9H9cAd"
+            "image":"allgym1_Y9H9cAd.jpg"
         }
     },
     {
@@ -22,7 +22,7 @@
             "price": 58,
             "category": 2,
             "image_url":"https://images.unsplash.com/photo-1623874514711-0f321325f318?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
-            "image":"allgym2_ICLX84G"
+            "image":"allgym2_ICLX84G.jpg"
         }
     },
     {
@@ -35,7 +35,7 @@
             "price": 12,
             "category": 3,
             "image_url":"https://images.unsplash.com/photo-1596357395104-ba989e72b5ec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1742&q=80",
-            "image":"allgym3"
+            "image":"allgym3.jpg"
         }
     },
     {
@@ -48,7 +48,7 @@
             "price": 400,
             "category": 1,
             "image_url":"https://images.unsplash.com/photo-1518611012118-696072aa579a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
-            "image":"groupsession1_Hh3lAj1_0FPNoQb"
+            "image":"groupsession1_Hh3lAj1_0FPNoQb.jpg"
         }
     },
     {
@@ -61,7 +61,7 @@
             "price": 38,
             "category": 2,
             "image_url":"https://images.unsplash.com/photo-1517130038641-a774d04afb3c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80",
-            "image":"groupsession2_06iLjZc_HsSyTHc"
+            "image":"groupsession2_06iLjZc_HsSyTHc.jpg"
         }
     },
     {
@@ -74,7 +74,7 @@
             "price": 8,
             "category": 3,
             "image_url":"https://images.unsplash.com/photo-1518310383802-640c2de311b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
-            "image":"groupsession3_qS6SlSF_7l1iuAG"
+            "image":"groupsession3_qS6SlSF_7l1iuAG.jpg"
         }
     },
     {

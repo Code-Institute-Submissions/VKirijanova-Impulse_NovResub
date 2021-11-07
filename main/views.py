@@ -18,3 +18,7 @@ def timetable(request):
 
 def facilities(request):
     return render(request, 'main/facilities.html')
+
+
+def blog(request):
+    return render(request, 'blog/blog.html')

@@ -116,17 +116,18 @@ WSGI_APPLICATION = 'impulse.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#if 'DATABASE_URL' in os.environ:
+
+#DATABASES = {
+#        'default': dj_database_url.parse('postgres://vtmdlqdernpmen:3d35ae82cfd03a9d20229a74b4318a100565156bec446b91078ce2786f686c52@ec2-44-198-196-149.compute-1.amazonaws.com:5432/d6fifjt0elg6mq')
+#    }
+#else:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

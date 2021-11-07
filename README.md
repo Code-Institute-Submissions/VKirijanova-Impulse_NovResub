@@ -18,7 +18,7 @@ There will be 12 packages available to purchase 1 year (full gym, swimming pool 
 All website will be created in same design. The header will be fixed on the top with all required buttons. 
 
 The wireframe for mobile phone and desktop will look the same, however mobile version will hide in collapsable button second row of nav bar.
-[![mockup.png](https://i.postimg.cc/KvZN5Rb1/mockup.png)](https://postimg.cc/tss6mJWR)
+[![GYM.png](https://i.postimg.cc/0yfCjJNS/GYM.png)](https://postimg.cc/tss6mJWR)
 
 ## Surfuce plane ##
 Website designed in light colors with slightly blue shadow to match main picture. 
@@ -27,9 +27,8 @@ Website designed in light colors with slightly blue shadow to match main picture
 1. As a user I would like to register to my peronal account.
 2. As a user I would like to login and logout.
 3. As a user I would like to receive confirmation email after creating account.
-4. As a user I would like to see my previous packages.
-5. As a user I would like to see all packages available.
-6. As a user I would like to see details of packages (like price, what included)
+4. As a user I would like to see all packages available.
+5. As a user I would like to see details of packages (like price, what included)
 6. As a user I would like to see classes and what time they are available.
 7. As a user I would like to view the total packages.
 

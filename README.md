@@ -88,7 +88,7 @@ Nav bar has main name of page 'Impulse' which redirect you to main page as soon 
     User can see Member Login straight after entering website. After pressing button login user will have to enter his user name and password to enter login. Same button Member Login will have dropdown button Sign Out. When user will sign out website will reconfirm if user truly wish to log out.
 
 3. As a user I would like to receive confirmation email after creating account.
-    With the help of Google mail, user will receive confirmation straight after purchasing package.
+    With the help of Google mail, user will receive confirmation after purchasing package or sign in with our website. Confirmation email might take up to 10 minutes to show in email box.
 
 4. As a user I would like to see all packages available.
     By pressing packages on nav bar user will see all packages available along with name and price.

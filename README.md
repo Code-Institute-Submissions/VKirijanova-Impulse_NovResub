@@ -103,7 +103,8 @@ Nav bar has main name of page 'Impulse' which redirect you to main page as soon 
     By pressing shopping bag user can see all order, review number and securely purchase package and join gym.
 
 ### Issues ###
-1. Issue with wevhook handler, especially handle_payment_intent_succeeded. Couldn't solve issue
+1. Issue with wevhook handler, especially handle_payment_intent_succeeded. 
+2. Pictures are not uploading only on club facilities. Error showing that file cannot be find, but pictures are correctly upload to AWS and are in gitpod media folder. Images dissapear after uploading to AWS, packages some pictures I put back as admin website, but facilities could't find solution.
 
 # Deployment #
 

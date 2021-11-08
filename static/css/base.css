@@ -10,6 +10,9 @@ body {
   font-family: 'Gluten', cursive;;
 }
 
+#groupsession2 {
+  background-image: url('/media/groupsession2.jpg');
+}
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
